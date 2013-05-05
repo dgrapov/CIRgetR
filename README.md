@@ -4,7 +4,7 @@ CIRgetR
 R interface for chemical identifier translation through the Chemical Identifier Resolver (CIR) by the CADD Group at the NCI/NIH.
 
 
-'''R
+```r
 #test
 id<- c("C[N+](C)(C)[O-]", "CC(=O)Oc1ccccc1C(=O)O")  	
 opts<-c("smiles", "names", "iupac_name", "cas", "inchi", "stdinchi", "inchikey", "stdinchikey",
@@ -19,4 +19,4 @@ colnames(translations)<-opts
 
 #image test
 CIRgetR(id,to="image")
-'''
+```
