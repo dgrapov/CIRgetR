@@ -1,2 +1,2 @@
 exportPattern("^[[:alpha:]]+")
-export (CTSgetR)
+export (CIRgetR)
