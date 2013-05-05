@@ -2,10 +2,10 @@
 \alias{CIRgetR}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+R interface for chemical identifier translation through the Chemical Identifier Resolver (CIR) 
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+ Based on ID for structure (smiles, InchI) translate to Database identifiers (PubChem, ChemSpider, etc.) and more.
 }
 \usage{
 CIRgetR(id, to = c("pubchem_sid"), return.all = TRUE, progress = TRUE)
@@ -61,5 +61,6 @@ colnames(translations)<-opts
 
 #image test
 CIRgetR(id,to="image")
-\keyword{ ~kwd1 }
+}
+\keyword{ ~kwd1 } 
 \keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
