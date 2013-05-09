@@ -3,7 +3,7 @@ CIRgetR
 
 R interface for chemical identifier translation through the [Chemical Identifier Resolver (CIR)](http://cactus.nci.nih.gov/chemical/structure) by the CADD Group at the NCI/NIH.
 
-## Install dependancies
+### Install dependancies
 ```r
 #install background packages
 install.packages("devtools");install.packages("RJSONIO")
@@ -14,7 +14,7 @@ library(CIRgetR)
 ```
 
 
-## Example of a convertion from SMILES to some of the many possible options in CIR
+### Example of a convertion from SMILES to some of the many possible options in CIR
 ```r
 #Example
 id<- c("C[N+](C)(C)[O-]", "CC(=O)Oc1ccccc1C(=O)O")  	
