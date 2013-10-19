@@ -1,6 +1,6 @@
-CIRgetR<-function(id,to=c("pubchem_sid"),return.all=TRUE,progress=TRUE){
-		#id needs to be  one of the folowing types of structural ids "inchi","inchiKey" or "smiles"
-		#to can be:	smiles, names, iupac_name, cas, inchi, 
+CIRgetR<-function(id,to=c("pubchem_sid"),return.all=TRUE,progress=FALSE){
+		#id: needs to be  one of the folowing types of structural ids "inchi","inchiKey" or "smiles"
+		#to: can be:	smiles, names, iupac_name, cas, inchi, 
 		#			stdinchi, inchikey, stdinchikey,
 		#			ficts, ficus, uuuuu, image, # here return url do not evaluate 
 		#			mw, monoisotopic_mass,file, 

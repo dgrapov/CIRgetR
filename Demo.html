@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>CIRgetR</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>CIRgetR</h1>
+
+<p>R interface for chemical identifier translation through the <a href="http://cactus.nci.nih.gov/chemical/structure">Chemical Identifier Resolver (CIR)</a> by the CADD Group at the NCI/NIH.</p>
+
+<p>Install package.</p>
+
+<pre><code class="r">install.packages(&quot;devtools&quot;)
+</code></pre>
+
+<pre><code>## Error: trying to use CRAN without setting a mirror
+</code></pre>
+
+<pre><code class="r">install.packages(&quot;RJSONIO&quot;)
+</code></pre>
+
+<pre><code>## Error: trying to use CRAN without setting a mirror
+</code></pre>
+
+<pre><code class="r">library(devtools)
+library(RJSONIO)
+
+install_github(repo = &quot;CIRgetR&quot;, username = &quot;dgrapov&quot;)
+library(CIRgetR)
+</code></pre>
+
+<p>Try translating inchi codes.</p>
+
+<pre><code class="r"># test
+id &lt;- &quot;CYQFCXCEBYINGO-IAGOWNOFSA-N&quot;
+opts &lt;- c(&quot;smiles&quot;, &quot;names&quot;, &quot;iupac_name&quot;, &quot;cas&quot;, &quot;inchi&quot;, &quot;stdinchi&quot;, &quot;inchikey&quot;, 
+    &quot;stdinchikey&quot;, &quot;ficts&quot;, &quot;ficus&quot;, &quot;uuuuu&quot;, &quot;image&quot;, &quot;file&quot;, &quot;mw&quot;, &quot;monoisotopic_mass&quot;, 
+    &quot;chemspider_id&quot;, &quot;pubchem_sid&quot;, &quot;chemnavigator_sid&quot;, &quot;formula&quot;, &quot;chemnavigator_sid&quot;)
+
+translations &lt;- lapply(1:length(opts), function(i) {
+    CIRgetR(id = id, to = opts[i], return.all = FALSE, progress = FALSE)
+})
+translations &lt;- do.call(&quot;cbind&quot;, translations)
+t(translations)
+</code></pre>
+
+<pre><code>##                   [,1]                                                                                                                                  
+## smiles            &quot;[C@H]23C1=C(C=C(C=C1OC([C@@H]2CCC(=C3)C)(C)C)CCCCC)O&quot;                                                                                
+## names             &quot;(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]chromen-1-ol&quot;                                                       
+## iupac_name        &quot;(6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]chromen-1-ol&quot;                                                       
+## cas               &quot;5957-27-7&quot;                                                                                                                           
+## inchi             &quot;InChI=1/C21H30O2/c1-5-6-7-8-15-12-18(22)20-16-11-14(2)9-10-17(16)21(3,4)23-19(20)13-15/h11-13,16-17,22H,5-10H2,1-4H3/t16-,17-/m1/s1&quot; 
+## stdinchi          &quot;InChI=1S/C21H30O2/c1-5-6-7-8-15-12-18(22)20-16-11-14(2)9-10-17(16)21(3,4)23-19(20)13-15/h11-13,16-17,22H,5-10H2,1-4H3/t16-,17-/m1/s1&quot;
+## inchikey          &quot;InChIKey=CYQFCXCEBYINGO-IAGOWNOFNA-N&quot;                                                                                                
+## stdinchikey       &quot;InChIKey=CYQFCXCEBYINGO-IAGOWNOFSA-N&quot;                                                                                                
+## ficts             &quot;D6DB420FE104B075-FICTS-01-3A&quot;                                                                                                        
+## ficus             &quot;D6DB420FE104B075-FICuS-01-5B&quot;                                                                                                        
+## uuuuu             &quot;03D2FB2779F109C1-uuuuu-01-04&quot;                                                                                                        
+## image             &quot;http://cactus.nci.nih.gov/chemical/structure/CYQFCXCEBYINGO-IAGOWNOFSA-N/image&quot;                                                      
+## file              &quot;C21H30O2&quot;                                                                                                                            
+## mw                &quot;314.4668&quot;                                                                                                                            
+## monoisotopic_mass &quot;314.2246&quot;                                                                                                                            
+## chemspider_id     &quot;15266&quot;                                                                                                                               
+## pubchem_sid       &quot;24701569&quot;                                                                                                                            
+## chemnavigator_sid &quot;28846069&quot;                                                                                                                            
+## formula           &quot;C21H30O2&quot;                                                                                                                            
+## chemnavigator_sid &quot;28846069&quot;
+</code></pre>
+
+<pre><code class="r"># colnames(translations)&lt;-opts translations
+</code></pre>
+
+<p>Show structures.</p>
+
+<pre><code class="r">install.packages(&quot;caTools&quot;)
+</code></pre>
+
+<pre><code>## Error: trying to use CRAN without setting a mirror
+</code></pre>
+
+<pre><code class="r">library(caTools)
+image.url &lt;- as.character(translations$image[1])
+gif &lt;- read.gif(image.url, verbose = TRUE, flip = TRUE)
+</code></pre>
+
+<pre><code>## GIF image header
+## Global colormap with 32 colors 
+## Comment Extension
+## Image [250 x 250]: 1114 bytes
+</code></pre>
+
+<pre><code class="r">par(pin = c(4, 4))
+image(gif$image, col = gif$col, main = as.character(translations$name[1]), frame.plot = FALSE, 
+    xaxt = &quot;n&quot;, yaxt = &quot;n&quot;)
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAKICAMAAABuVD00AAAAkFBMVEX9/v0AAAAAADkAAGUAOY8AZo8AZrUvT08zU1M5AAA5OTk5OY85ZmU5j485j9o6WFhKZmZheXllAABlADllZjlltbVltf2POQCPOTmPtY+P27WP2/2So6O1ZgC1tWW124+1/v3ajznatWXa/rXa/tra/v3l6en5+fn9tWX924/9/rX9/tr9/v3+rq7/AAD///82NMXUAAAAMHRSTlP//////////////////////////////////////////////////////////wD///+RojkEAAAACXBIWXMAAAsSAAALEgHS3X78AAAUCUlEQVR4nO3dC3fb1pWG4cJJJXsuaut2nJlxNA0z41Z2WPv//7shcHA5AAESR+Y+u/z2+6wVRxIBEOB+Bd5k63dHQMjvvHcAuCWChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhSChhS7oA9vPh6Pz03z46fxS1/eN60ffhm+8Pndw+nP335qmofjylKf3z2NX823lH3cLjyt+/xh3MZ0JQunZX77aX7ptPR8cxeM15Rf1fxoW4fuUJoP48avHPvZ1s8/61ZaObov7xfXvbHcutl+zI6jYCMr0lHOXJjNDZgF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" alt="plot of chunk unnamed-chunk-3"/> </p>
+
+</body>
+
+</html>
+

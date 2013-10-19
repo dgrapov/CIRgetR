@@ -99,7 +99,7 @@ gif <- read.gif(image.url, verbose = TRUE, flip = TRUE)
 ```
 
 ```r
-par(pin = c(3.5, 3.5))
+par(pin = c(4, 4))
 image(gif$image, col = gif$col, main = as.character(translations$name[1]), frame.plot = FALSE, 
     xaxt = "n", yaxt = "n")
 ```
