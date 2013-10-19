@@ -11,8 +11,15 @@ library(devtools);library(RJSONIO)
 install_github(repo = "CIRgetR", username = "dgrapov")
 library(CIRgetR)
 
+<<<<<<< HEAD
 #to show gif
 install.packages("caTools")
+=======
+
+### Example of a convertion from SMILES to some of the many possible options in CIR
+```r
+install.packages("devtools")
+>>>>>>> 1244275f6da6b05c9b9d7702ef5c9a755a889769
 ```
 
 
