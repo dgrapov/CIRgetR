@@ -11,18 +11,11 @@ library(devtools);library(RJSONIO)
 install_github(repo = "CIRgetR", username = "dgrapov")
 library(CIRgetR)
 
-<<<<<<< HEAD
 #to show gif
 install.packages("caTools")
 =======
 
 ### Example of a convertion from SMILES to some of the many possible options in CIR
-```r
-install.packages("devtools")
->>>>>>> 1244275f6da6b05c9b9d7702ef5c9a755a889769
-```
-
-
 
 
 Try translating inchi codes.
@@ -74,12 +67,6 @@ image.url <- as.character(translations$image[1])
 gif <- read.gif(image.url, verbose = TRUE, flip = TRUE)
 ```
 
-```
-## GIF image header
-## Global colormap with 32 colors 
-## Comment Extension
-## Image [250 x 250]: 1114 bytes
-```
 
 ```r
 par(pin = c(3.5, 3.5))
