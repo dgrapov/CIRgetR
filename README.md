@@ -65,10 +65,13 @@ Show structures.
 library(caTools)
 image.url <- as.character(translations$image[1])
 gif <- read.gif(image.url, verbose = TRUE, flip = TRUE)
+<<<<<<< HEAD
 ```
 
 
 ```r
+=======
+>>>>>>> ddedaaba2badce343c21beb615dd4cd5a713d321
 par(pin = c(3.5, 3.5))
 image(gif$image, col = gif$col, main = as.character(translations$name[1]), frame.plot = FALSE, 
     xaxt = "n", yaxt = "n")
