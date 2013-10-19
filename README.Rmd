@@ -4,7 +4,18 @@ CIRgetR
 R interface for chemical identifier translation through the [Chemical Identifier Resolver (CIR)](http://cactus.nci.nih.gov/chemical/structure) by the CADD Group at the NCI/NIH.
 
 Install package.
-```{r,message=FALSE, warning=FALSE, results='hide'}
+```r
+install.packages("devtools");install.packages("RJSONIO")
+library(devtools);library(RJSONIO)
+
+install_github(repo = "CIRgetR", username = "dgrapov")
+library(CIRgetR)
+
+#to show gif
+install.packages("caTools")
+```
+
+```{r,echo=FALSE,message=FALSE, warning=FALSE, error=FALSE,results='hide'}
 install.packages("devtools");install.packages("RJSONIO")
 library(devtools);library(RJSONIO)
 
@@ -13,7 +24,7 @@ library(CIRgetR)
 ```
 
 Try translating inchi codes.
-```{r,message=FALSE, warning=FALSE}
+```{r,message=FALSE, warning=FALSE, erro=FALSE}
 #test
 id<-"CYQFCXCEBYINGO-IAGOWNOFSA-N"
 opts<-c("smiles", "names", "iupac_name", "cas", "inchi", "stdinchi", "inchikey", "stdinchikey",
@@ -26,13 +37,10 @@ translations<-lapply(1:length(opts), function(i)
 	})
 translations<-do.call("cbind",translations)
 t(translations)
-# colnames(translations)<-opts
-# translations
 ```
 
 Show structures.
 ```{r fig.width=10, fig.height=9,message=FALSE, warning=FALSE}
-install.packages("caTools")
 library(caTools)
 image.url<-as.character(translations$image[1])
 gif <- read.gif(image.url, verbose = TRUE, flip = TRUE)

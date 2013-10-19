@@ -184,23 +184,14 @@ hljs.initHighlightingOnLoad();
 
 <p>Install package.</p>
 
-<pre><code class="r">install.packages(&quot;devtools&quot;)
-</code></pre>
-
-<pre><code>## Error: trying to use CRAN without setting a mirror
-</code></pre>
-
-<pre><code class="r">install.packages(&quot;RJSONIO&quot;)
-</code></pre>
-
-<pre><code>## Error: trying to use CRAN without setting a mirror
-</code></pre>
-
-<pre><code class="r">library(devtools)
-library(RJSONIO)
+<pre><code class="r">install.packages(&quot;devtools&quot;);install.packages(&quot;RJSONIO&quot;)
+library(devtools);library(RJSONIO)
 
 install_github(repo = &quot;CIRgetR&quot;, username = &quot;dgrapov&quot;)
 library(CIRgetR)
+
+#to show gif
+install.packages(&quot;caTools&quot;)
 </code></pre>
 
 <p>Try translating inchi codes.</p>
@@ -241,16 +232,7 @@ t(translations)
 ## chemnavigator_sid &quot;28846069&quot;
 </code></pre>
 
-<pre><code class="r"># colnames(translations)&lt;-opts translations
-</code></pre>
-
 <p>Show structures.</p>
-
-<pre><code class="r">install.packages(&quot;caTools&quot;)
-</code></pre>
-
-<pre><code>## Error: trying to use CRAN without setting a mirror
-</code></pre>
 
 <pre><code class="r">library(caTools)
 image.url &lt;- as.character(translations$image[1])
